@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEasy</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eaeded;
+}
+
+/* Navbar */
+
+nav{
+    background:#131921;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    flex-wrap:wrap;
+}
+
+.logo{
+    color:#ff9900;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.search{
+    display:flex;
+    width:45%;
+}
+
+.search input{
+    width:100%;
+    padding:12px;
+    border:none;
+    outline:none;
+    font-size:16px;
+}
+
+.search button{
+    width:60px;
+    border:none;
+    background:#febd69;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:18px;
+}
+
+.menu a:hover{
+    color:#ff9900;
+}
+
+/* Hero */
+
+.hero{
+    height:500px;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:22px;
+}
+
+.hero button{
+    padding:15px 35px;
+    border:none;
+    background:#ff9900;
+    color:white;
+    font-size:20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.hero button:hover{
+    background:#e68a00;
+}
+
+/* Categories */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:40px;
+}
+
+.category{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.category h2{
+    margin-bottom:15px;
+}
+
+.category p{
+    color:gray;
+}
+
+/* Products */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#B12704;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.card button{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    background:#ffd814;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.card button:hover{
+    background:#f7ca00;
+}
+
+/* Footer */
+
+footer{
+    background:#131921;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+.search{
+    width:100%;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">ShopEasy</div>
+
+<div class="search">
+<input type="text" placeholder="Search products...">
+<button>🔍</button>
+</div>
+
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">Today's Deals</a>
+<a href="#">Orders</a>
+<a href="#">Cart</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>Everything You Need</h1>
+
+<p>Millions of products with fast delivery and great prices.</p>
+
+<button>Shop Now</button>
+
+</div>
+
+</section>
+
+<section class="categories">
+
+<div class="category">
+<h2>💻 Electronics</h2>
+<p>Laptops, phones, accessories and more.</p>
+</div>
+
+<div class="category">
+<h2>👕 Fashion</h2>
+<p>Trending clothing for everyone.</p>
+</div>
+
+<div class="category">
+<h2>🏠 Home</h2>
+<p>Furniture and home decoration.</p>
+</div>
+
+<div class="category">
+<h2>🎮 Gaming</h2>
+<p>Consoles, games and accessories.</p>
+</div>
+
+</section>
+
+<section class="products">
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=1">
+<div class="card-content">
+<h3>Gaming Laptop</h3>
+<p class="price">$999</p>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=2">
+<div class="card-content">
+<h3>Wireless Headphones</h3>
+<p class="price">$89</p>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=3">
+<div class="card-content">
+<h3>Smart Watch</h3>
+<p class="price">$199</p>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=4">
+<div class="card-content">
+<h3>Smart Phone</h3>
+<p class="price">$699</p>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=5">
+<div class="card-content">
+<h3>Camera</h3>
+<p class="price">$599</p>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=6">
+<div class="card-content">
+<h3>Bluetooth Speaker</h3>
+<p class="price">$49</p>
+<button>Add to Cart</button>
+</div>
+</div>
+
+</section>
+
+<footer>
+
+<h3>ShopEasy</h3>
+<br>
+<p>© 2026 ShopEasy. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
